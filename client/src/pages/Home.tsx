@@ -339,66 +339,14 @@ export default function Home() {
       <section className="py-20 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase mb-12">Trusted Partners</p>
-          <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20 opacity-60 hover:opacity-100 transition-all duration-500">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Vogue_logo.svg" alt="Vogue" className="h-6 md:h-8 object-contain invert" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Chanel_logo_intertwined.svg" alt="Chanel" className="h-6 md:h-8 object-contain invert" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Gucci_logo.svg" alt="Gucci" className="h-6 md:h-8 object-contain invert" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Prada_logo.svg" alt="Prada" className="h-6 md:h-8 object-contain invert" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Yves_Saint_Laurent_Logo.svg" alt="YSL" className="h-8 md:h-10 object-contain invert" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Dior_logo.svg" alt="Dior" className="h-6 md:h-8 object-contain invert" />
-          </div>
-        </div>
-      </section>
-
-      {/* Professional Content Sections */}
-      <section className="py-32 px-6 bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-[4/5] bg-muted overflow-hidden relative group">
-                <img 
-                  src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?q=80&w=1200&auto=format&fit=crop" 
-                  alt="High Fashion Editorial" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
-              </div>
-              <div className="absolute -bottom-12 -right-12 w-64 h-64 border border-primary/20 -z-10 hidden lg:block" />
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <span className="text-primary text-xs tracking-[0.4em] uppercase block">Our Philosophy</span>
-              <h2 className="text-5xl md:text-6xl font-serif text-foreground leading-tight">Beyond the Lens, <br/><span className="italic">Defining Style.</span></h2>
-              <p className="text-muted-foreground text-lg font-light leading-relaxed">
-                VOSS Casting isn't just an agency; it's a bridge between regional talent and the global fashion landscape. We specialize in identifying unique aesthetics and nurturing professional trajectories that command international attention.
-              </p>
-              <div className="grid grid-cols-2 gap-12 pt-8">
-                <div>
-                  <h4 className="text-3xl font-serif text-primary mb-2">150+</h4>
-                  <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Global Placements</p>
-                </div>
-                <div>
-                  <h4 className="text-3xl font-serif text-primary mb-2">12</h4>
-                  <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Fashion Capitals</p>
-                </div>
-              </div>
-              <Button variant="outline" className="mt-8 border-primary/30 hover:bg-primary/5 px-12 py-6 text-xs tracking-[0.3em] uppercase rounded-none">
-                Learn More
-              </Button>
-            </motion.div>
-          </div>
+            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
+              <span className="text-2xl font-serif tracking-tighter text-foreground/80 hover:text-primary transition-colors cursor-default">VOGUE</span>
+              <span className="text-2xl font-serif tracking-tighter text-foreground/80 hover:text-primary transition-colors cursor-default">CHANEL</span>
+              <span className="text-2xl font-serif tracking-tighter text-foreground/80 hover:text-primary transition-colors cursor-default">GUCCI</span>
+              <span className="text-2xl font-serif tracking-tighter text-foreground/80 hover:text-primary transition-colors cursor-default">PRADA</span>
+              <span className="text-2xl font-serif tracking-tighter text-foreground/80 hover:text-primary transition-colors cursor-default">YSL</span>
+              <span className="text-2xl font-serif tracking-tighter text-foreground/80 hover:text-primary transition-colors cursor-default">DIOR</span>
+            </div>
         </div>
       </section>
 
