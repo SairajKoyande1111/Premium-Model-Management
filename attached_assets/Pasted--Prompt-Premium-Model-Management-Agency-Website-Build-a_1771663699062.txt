@@ -1,0 +1,79 @@
+🖤 Prompt: Premium Model Management Agency Website
+Build a 4-page luxury model management agency website called "VOSS MODEL MANAGEMENT" (or replace with your agency name). The website must feel ultra-premium, editorial, and cinematic — like System Magazine meets IMG Models meets a high-fashion art house.
+
+🎨 Overall Aesthetic Direction
+
+Theme: Dark luxury — near-black backgrounds (#080808, #0d0d0d) with champagne gold (#C9A84C), warm ivory (#F5EDD6), and cold white accents
+Mood: Hushed, exclusive, powerful — like stepping into a Parisian atelier
+Typography: Pair a tall, elegant serif display font (e.g., Cormorant Garamond or Playfair Display SC for headings) with a razor-thin sans-serif (e.g., Tenor Sans or Josefin Sans for body/labels)
+Grid: Asymmetric editorial grid — images that bleed to edges, text that floats in generous negative space, unexpected overlapping elements
+Texture: Subtle grain/noise overlay on dark backgrounds to feel tactile and printed. Use very fine gold divider lines sparingly.
+Cursor: Replace default cursor with a small, hollow circle that expands on hover over interactive elements
+
+
+✨ Animations & Motion (Critical)
+
+Page Load: Full-screen black curtain that slides up/away to reveal content (like a theatre curtain reveal), with staggered fade-up of hero text letter by letter or word by word
+Scroll Animations: Elements fade and translate upward as they enter the viewport using IntersectionObserver
+Image Hover: Model cards scale very subtly (1.03x) and the overlay with their name + stats fades in with a fine gold border
+Navigation: Ultra-minimal fixed top nav — transparent over hero, becomes a dark frosted glass bar on scroll. Links have an underline that draws from center outward on hover.
+Page Transitions: Smooth fade-through-black transitions between pages (if SPA) OR a black overlay wipe between sections
+Parallax: Hero model image scrolls at 0.6x speed relative to text for depth
+Number Counters: On the "About" or stats section, numbers count up when scrolled into view (e.g., "200+ Models", "32 Countries", "15 Years")
+
+
+📄 Page 1: HOME
+
+Full-screen hero: Cinematic dark image of a model (placeholder via unsplash.com or a dark gradient placeholder), with large editorial headline broken across two lines:
+"WE DON'T / REPRESENT MODELS. / WE BUILD ICONS." — in tall serif, staggered entrance animation
+Scrolling ticker/marquee: Fine gold line with repeating text like VOSS MODEL MANAGEMENT · EST. 2010 · NEW YORK · PARIS · MILAN ·
+Featured Models section: 3-column asymmetric grid — one large image, two stacked smaller ones. On hover, each shows model name + category (Commercial / Editorial / Runway) with a smooth overlay
+Brand Logos strip: "As seen in / worked with" — Vogue, Dior, Chanel, etc. logos in muted opacity that brightens on hover
+CTA Section: Full-width dark section with a single centered line: "YOUR NEXT FACE IS HERE" and a minimal outlined button [ DISCOVER THE ROSTER ]
+
+
+📄 Page 2: MODELS (Roster)
+
+Filter bar: Minimal pill-style filters — ALL / WOMEN / MEN / NEW FACES — with an animated underline indicator that slides between active states
+Grid layout: Masonry or offset editorial grid of model cards. Each card is a portrait photo with:
+
+Name in small uppercase tracking-widest serif
+Stats (Height, Eyes, Location) that appear on hover in a fine-print monospace font
+A thin gold border that draws around the card on hover
+
+
+Load More: Not pagination — a single [ VIEW MORE ] button that smoothly reveals the next set with a fade animation
+Detail Drawer (optional upgrade): Clicking a model slides in a right-side drawer panel with their full composite card, measurements, and a "Book This Model" CTA
+
+
+📄 Page 3: ABOUT
+
+Opening statement: Large, slow-fade centered quote in italic serif — "Every face tells a story. We make sure the world listens."
+Split layout section: Left — a vertical stack of editorial images. Right — scrolling text about the agency's philosophy, broken into short, punchy paragraphs
+Stats row: 3–4 animated counters with gold numbers and small labels beneath (e.g., 200+ / Models Worldwide, 15 / Years of Excellence)
+Team section: Minimal cards for founders/directors — name, title, very short bio. Greyscale photos that colorize subtly on hover.
+Timeline (optional): A vertical or horizontal timeline of agency milestones in elegant minimal style
+
+
+📄 Page 4: CONTACT / APPLY
+
+Two-column split:
+
+Left: Dark background with the headline "LET'S CREATE SOMETHING ICONIC" + agency contact details (address in NYC/Paris/Milan, email, phone) in small spaced-out sans-serif
+Right: Clean application/contact form on a slightly lighter dark card. Fields for Name, Email, Category (Model / Brand / Press), Message. Fields have a gold bottom-border-only style that glows faintly gold on focus.
+
+
+Submit button: Full-width, outlined gold border button that fills with gold on hover, text inverts
+Map (optional): Minimal dark-styled Google Map embed showing agency location(s)
+Footer: Full-width black footer with logo centered, nav links in tiny uppercase, social icons (Instagram, LinkedIn) as thin line icons, and a fine copyright line
+
+
+🔧 Technical Notes
+
+Build in React (JSX) with Tailwind CSS for utility classes
+Use Framer Motion (motion library) for all animations
+Import fonts from Google Fonts: Cormorant Garamond (display) + Josefin Sans (UI)
+All model photos: use https://images.unsplash.com with fashion/portrait query params as placeholders
+Fully responsive — mobile nav becomes a full-screen hamburger overlay menu that slides in from right, also dark with gold accents
+No purple gradients, no Inter font, no generic card shadows — everything must feel intentional and editorial
+
