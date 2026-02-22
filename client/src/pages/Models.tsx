@@ -17,6 +17,8 @@ export default function Models() {
     return model.gender === activeFilter;
   }) || [];
 
+  const displayModels = filteredModels.slice(0, 12);
+
   return (
     <PageTransition>
       <div className="min-h-screen pt-32 pb-20 px-6 md:px-12">
@@ -54,11 +56,11 @@ export default function Models() {
             <AnimatePresence mode="popLayout">
               {isLoading ? (
                 // Loading Skeletons
-                [...Array(8)].map((_, i) => (
+                [...Array(12)].map((_, i) => (
                   <div key={i} className="aspect-[3/4] bg-white/5 animate-pulse rounded-sm" />
                 ))
-              ) : filteredModels.length > 0 ? (
-                filteredModels.map((model) => (
+              ) : displayModels.length > 0 ? (
+                displayModels.map((model) => (
                   <motion.div
                     layout
                     key={model.id}
