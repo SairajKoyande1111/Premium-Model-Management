@@ -1,17 +1,14 @@
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { api, buildUrl } from "@shared/routes";
-import { z } from "zod";
-import type { Model, InsertModel } from "@shared/schema";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { api } from "@shared/routes";
+import { LOCAL_MODELS } from "@/lib/models-data";
 
 // GET /api/models
 export function useModels() {
   return useQuery({
     queryKey: [api.models.list.path],
     queryFn: async () => {
-      const res = await fetch(api.models.list.path);
-      if (!res.ok) throw new Error("Failed to fetch models");
-      // Use the Zod schema from routes to validate response
-      return api.models.list.responses[200].parse(await res.json());
+      // Return local data directly for Netlify compatibility
+      return LOCAL_MODELS as any[];
     },
   });
 }
@@ -21,11 +18,8 @@ export function useModel(id: number) {
   return useQuery({
     queryKey: [api.models.get.path, id],
     queryFn: async () => {
-      const url = buildUrl(api.models.get.path, { id });
-      const res = await fetch(url);
-      if (res.status === 404) return null;
-      if (!res.ok) throw new Error("Failed to fetch model details");
-      return api.models.get.responses[200].parse(await res.json());
+      const model = LOCAL_MODELS.find(m => m.id === id);
+      return (model as any) || null;
     },
     enabled: !!id,
   });
