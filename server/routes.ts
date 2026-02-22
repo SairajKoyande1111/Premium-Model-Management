@@ -79,6 +79,42 @@ async function seedDatabase() {
         ],
         instagram: "siennaluxe",
         stats: { loves: 980, views: 4500, followers: 6700 }
+      },
+      {
+        name: "Layla Noor",
+        category: "Runway",
+        gender: "Women",
+        height: "5'11\"",
+        eyes: "Hazel",
+        location: "Cairo",
+        imageUrl: "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?q=80&w=1974&auto=format&fit=crop",
+        isNewFace: false,
+        bio: "Layla's commanding presence and architectural features have made her a favorite for avant-garde runway shows across the Middle East and Europe.",
+        measurements: { bust: "32", waist: "24", hips: "34", shoes: "39", chest: "32" },
+        gallery: [
+          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974&auto=format&fit=crop"
+        ],
+        instagram: "layla.noor",
+        stats: { loves: 1850, views: 6200, followers: 12400 }
+      },
+      {
+        name: "Zidan Al-Fayed",
+        category: "Editorial",
+        gender: "Men",
+        height: "6'3\"",
+        eyes: "Dark Brown",
+        location: "Dubai",
+        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+        isNewFace: false,
+        bio: "Zidan represents the modern face of Middle Eastern luxury, blending traditional charm with international appeal.",
+        measurements: { chest: "40", waist: "31", hips: "39", shoes: "44" },
+        gallery: [
+          "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=800",
+          "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800"
+        ],
+        instagram: "zidan_alfayed",
+        stats: { loves: 2400, views: 8900, followers: 18500 }
       }
     ];
 

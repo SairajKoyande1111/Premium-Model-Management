@@ -2,14 +2,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useModels } from "@/hooks/use-models";
 import { PageTransition } from "@/components/PageTransition";
-import { Link } from "wouter";
-import { Filter } from "lucide-react";
+import { ModelDetail } from "@/components/ModelDetail";
 
 type FilterType = 'All' | 'Women' | 'Men' | 'New Faces';
 
 export default function Models() {
   const { data: models, isLoading } = useModels();
   const [activeFilter, setActiveFilter] = useState<FilterType>('All');
+  const [selectedModelId, setSelectedModelId] = useState<number | null>(null);
 
   const filteredModels = models?.filter(model => {
     if (activeFilter === 'All') return true;
@@ -21,6 +21,12 @@ export default function Models() {
 
   return (
     <PageTransition>
+      <AnimatePresence>
+        {selectedModelId && (
+          <ModelDetail id={selectedModelId} onClose={() => setSelectedModelId(null)} />
+        )}
+      </AnimatePresence>
+      
       <div className="min-h-screen pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -68,7 +74,8 @@ export default function Models() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.4 }}
-                    className="group relative"
+                    className="group relative cursor-pointer"
+                    onClick={() => setSelectedModelId(model.id)}
                   >
                     <div className="aspect-[3/4] overflow-hidden bg-muted relative mb-4 border border-transparent group-hover:border-primary/50 transition-colors duration-500">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col justify-end p-6">
@@ -85,7 +92,7 @@ export default function Models() {
                       />
                       
                       {model.isNewFace && (
-                        <div className="absolute top-3 right-3 bg-white text-black text-[9px] font-bold uppercase px-2 py-1 tracking-wider z-20">
+                        <div className="absolute top-3 right-3 bg-primary text-background text-[9px] font-bold uppercase px-2 py-1 tracking-wider z-20">
                           New
                         </div>
                       )}
