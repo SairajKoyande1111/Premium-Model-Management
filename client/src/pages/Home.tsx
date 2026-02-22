@@ -9,9 +9,10 @@ import { useEffect, useState, useRef } from "react";
 import { ModelDetail } from "@/components/ModelDetail";
 import { Button } from "@/components/ui/button";
 
-// Assets for the new sections
 import gridImg1 from "@assets/Screenshot_2026-02-22_at_2.55.56_PM_1771752359672.png";
 import gridImg2 from "@assets/Screenshot_2026-02-22_at_2.56.10_PM_1771752373485.png";
+import gridImg3 from "@assets/Screenshot_2026-02-22_at_2.53.01_PM_1771752184472.png";
+import gridImg4 from "@assets/Screenshot_2026-02-22_at_2.52.44_PM_1771752167736.png";
 
 const Typewriter = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");
@@ -349,7 +350,7 @@ export default function Home() {
               whileHover={{ scale: 0.98 }}
               className="col-span-2 row-span-2 rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src="/src/assets/images/trip_1.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
+              <img src={gridImg1} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
             
@@ -357,21 +358,21 @@ export default function Home() {
               whileHover={{ scale: 0.98 }}
               className="col-span-2 rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src="/src/assets/images/trip_2.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
+              <img src={gridImg2} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 0.98 }}
               className="rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src="/src/assets/images/trip_3.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
+              <img src={gridImg3} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 0.98 }}
               className="rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src="/src/assets/images/trip_4.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
+              <img src={gridImg4} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
             </motion.div>
           </div>
         </div>
