@@ -132,7 +132,7 @@ export default function Home() {
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   
   // Filter new faces
-  const newFaces = models?.filter(m => m.isNewFace).slice(0, 4) || [];
+  const newFaces = models?.filter(m => m.isNewFace).slice(0, 12) || [];
 
   const brandLogos = [
     "VOGUE", "CHANEL", "GUCCI", "PRADA", "YSL", "DIOR", 
@@ -291,31 +291,45 @@ export default function Home() {
       </section>
 
       {/* Member Requirements Section */}
-      <section className="py-32 relative overflow-hidden bg-background">
+      <section className="py-32 md:py-48 relative overflow-hidden bg-background border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            <div className="lg:col-span-4">
-              <h2 className="text-6xl md:text-7xl font-serif text-foreground leading-none mb-4 uppercase tracking-tighter">Member<br/>Requirements</h2>
-              <p className="text-xs tracking-[0.3em] text-primary uppercase font-bold">Exclusive Entry Protocol</p>
-            </div>
-            
-            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="p-8 border border-white/5 bg-white/5 backdrop-blur-sm hover:border-primary/50 transition-colors duration-500 rounded-2xl group">
-                <span className="text-primary text-[10px] tracking-[0.4em] uppercase font-bold block mb-6">Digital Reach</span>
-                <h3 className="text-3xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">1M+ Network</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed font-light">A verified combined following exceeding one million across primary social platforms is mandatory for consideration.</p>
-              </div>
-              <div className="p-8 border border-white/5 bg-white/5 backdrop-blur-sm hover:border-primary/50 transition-colors duration-500 rounded-2xl group">
-                <span className="text-primary text-[10px] tracking-[0.4em] uppercase font-bold block mb-6">Impact Score</span>
-                <h3 className="text-3xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">5% Engagement</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed font-light">We prioritize active influence. An organic engagement rate of 5% or higher is required to ensure authentic brand resonance.</p>
-              </div>
-              <div className="p-8 border border-white/5 bg-white/5 backdrop-blur-sm hover:border-primary/50 transition-colors duration-500 rounded-2xl group">
-                <span className="text-primary text-[10px] tracking-[0.4em] uppercase font-bold block mb-6">Curation</span>
-                <h3 className="text-3xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">Direct Approval</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed font-light">Final selection is determined through a rigorous multi-stage review process, including a personal interview with our founding team.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-24">
+            <div className="lg:col-span-5">
+              <h2 className="text-6xl md:text-8xl font-serif text-white leading-[0.85] uppercase tracking-tighter mb-8">
+                Member<br/>Requirements
+              </h2>
+              <div className="flex items-center gap-4">
+                <div className="h-[1px] w-12 bg-primary" />
+                <p className="text-[10px] tracking-[0.5em] text-primary uppercase font-bold">Exclusive Entry Protocol</p>
               </div>
             </div>
+            <div className="lg:col-span-7 pt-4">
+              <p className="text-white/60 text-xl md:text-2xl font-light leading-relaxed max-w-2xl lg:border-l lg:border-white/10 lg:pl-12">
+                We maintain elite standards for our global talent network, ensuring only the most impactful creators join our ranks.
+              </p>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {[
+              { id: "01", title: "1M+ Network", desc: "Verified combined following exceeding 1 million across primary platforms." },
+              { id: "02", title: "5% Engagement", desc: "Consistent organic interaction rate of 5% or higher is mandatory." },
+              { id: "03", title: "Direct Approval", desc: "Final selection via rigorous review and founding team interview." }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                whileHover={{ y: -10 }}
+                className="p-10 border border-white/10 bg-white/[0.02] backdrop-blur-xl rounded-[2.5rem] group transition-all duration-700 hover:border-primary/40 hover:bg-white/[0.04]"
+              >
+                <span className="text-primary font-serif text-4xl block mb-8 opacity-40 group-hover:opacity-100 transition-opacity italic underline underline-offset-8 decoration-1">
+                  {item.id}
+                </span>
+                <h3 className="text-2xl font-serif text-white mb-4 tracking-tight">{item.title}</h3>
+                <p className="text-white/70 text-sm leading-relaxed font-sans font-light">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

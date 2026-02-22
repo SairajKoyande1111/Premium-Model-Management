@@ -17,7 +17,7 @@ export default function Models() {
     return model.gender === activeFilter;
   }) || [];
 
-  const displayModels = filteredModels.slice(0, 12);
+  const displayModels = filteredModels;
 
   return (
     <PageTransition>
