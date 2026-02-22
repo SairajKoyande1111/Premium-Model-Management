@@ -1,17 +1,13 @@
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { api, buildUrl } from "@shared/routes";
-import { z } from "zod";
-import type { Model, InsertModel } from "@shared/schema";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import type { Model } from "@shared/schema";
+import { models } from "../data/models";
 
 // GET /api/models
 export function useModels() {
   return useQuery({
-    queryKey: [api.models.list.path],
+    queryKey: ["/api/models"],
     queryFn: async () => {
-      const res = await fetch(api.models.list.path);
-      if (!res.ok) throw new Error("Failed to fetch models");
-      // Use the Zod schema from routes to validate response
-      return api.models.list.responses[200].parse(await res.json());
+      return models;
     },
   });
 }
@@ -19,38 +15,25 @@ export function useModels() {
 // GET /api/models/:id
 export function useModel(id: number) {
   return useQuery({
-    queryKey: [api.models.get.path, id],
+    queryKey: ["/api/models", id],
     queryFn: async () => {
-      const url = buildUrl(api.models.get.path, { id });
-      const res = await fetch(url);
-      if (res.status === 404) return null;
-      if (!res.ok) throw new Error("Failed to fetch model details");
-      return api.models.get.responses[200].parse(await res.json());
+      const model = models.find(m => m.id === id);
+      if (!model) return null;
+      return model;
     },
     enabled: !!id,
   });
 }
 
 // Contact Form Mutation
-// POST /api/contact
+// Simulated for static site
 export function useContactSubmission() {
   return useMutation({
     mutationFn: async (data: any) => {
-      // Validate input against schema
-      const validated = api.contact.submit.input.parse(data);
-      
-      const res = await fetch(api.contact.submit.path, {
-        method: api.contact.submit.method,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(validated),
-      });
-
-      if (!res.ok) {
-        const error = await res.json();
-        throw new Error(error.message || "Failed to submit form");
-      }
-      
-      return api.contact.submit.responses[201].parse(await res.json());
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log("Contact form submitted (static mode):", data);
+      return { success: true };
     },
   });
 }
