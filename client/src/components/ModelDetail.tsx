@@ -34,8 +34,6 @@ export function ModelDetail({ id, onClose }: { id: number, onClose: () => void }
               transition={{ duration: 1.5, ease: "easeOut" }}
               src={model.imageUrl} 
               alt={model.name} 
-              loading="eager"
-              decoding="async"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-background/20" />
@@ -123,13 +121,13 @@ export function ModelDetail({ id, onClose }: { id: number, onClose: () => void }
                  <span className="text-[9px] text-muted-foreground uppercase tracking-widest italic font-sans">Spring / Summer 2026</span>
                </div>
                <div className="grid grid-cols-2 gap-4">
-                 {model.gallery?.map((img: string, i: number) => (
+                 {model.gallery?.map((img, i) => (
                    <motion.div 
                      key={i} 
                      whileHover={{ scale: 0.98 }}
                      className="aspect-[3/4] bg-muted overflow-hidden relative group cursor-crosshair"
                    >
-                     <img src={img} alt="" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" loading="lazy" decoding="async" />
+                     <img src={img} alt="" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                      <Maximize2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 scale-50 group-hover:scale-100" />
                    </motion.div>

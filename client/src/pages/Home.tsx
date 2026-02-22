@@ -160,7 +160,6 @@ export default function Home() {
             loop 
             muted 
             playsInline
-            preload="auto"
             className="absolute inset-0 w-full h-full object-cover opacity-60"
           >
             <source src={heroVideo} type="video/mp4" />
@@ -271,8 +270,6 @@ export default function Home() {
                   <img 
                     src={model.imageUrl} 
                     alt={model.name}
-                    loading="lazy"
-                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {model.isNewFace && (
@@ -352,7 +349,7 @@ export default function Home() {
               whileHover={{ scale: 0.98 }}
               className="col-span-2 row-span-2 rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src="/src/assets/images/trip_1.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" loading="lazy" decoding="async" />
+              <img src="/src/assets/images/trip_1.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
             
@@ -360,21 +357,21 @@ export default function Home() {
               whileHover={{ scale: 0.98 }}
               className="col-span-2 rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src="/src/assets/images/trip_2.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" loading="lazy" decoding="async" />
+              <img src="/src/assets/images/trip_2.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 0.98 }}
               className="rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src="/src/assets/images/trip_3.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" loading="lazy" decoding="async" />
+              <img src="/src/assets/images/trip_3.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 0.98 }}
               className="rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src="/src/assets/images/trip_4.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" loading="lazy" decoding="async" />
+              <img src="/src/assets/images/trip_4.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
             </motion.div>
           </div>
         </div>
@@ -387,7 +384,6 @@ export default function Home() {
           loop 
           muted 
           playsInline
-          preload="none"
           className="absolute inset-0 w-full h-full object-cover opacity-40"
         >
           <source src={reviewVideo} type="video/mp4" />
