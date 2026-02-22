@@ -123,7 +123,7 @@ export function ModelDetail({ id, onClose }: { id: number, onClose: () => void }
                  <span className="text-[9px] text-muted-foreground uppercase tracking-widest italic font-sans">Spring / Summer 2026</span>
                </div>
                <div className="grid grid-cols-2 gap-4">
-                 {model.gallery?.map((img, i) => (
+                 {model.gallery?.map((img: string, i: number) => (
                    <motion.div 
                      key={i} 
                      whileHover={{ scale: 0.98 }}
