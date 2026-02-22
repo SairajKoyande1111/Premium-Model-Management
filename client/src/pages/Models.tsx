@@ -79,7 +79,7 @@ export default function Models() {
                       <img 
                         src={model.imageUrl} 
                         alt={model.name}
-                        className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                       />
                       
                       {model.isNewFace && (
