@@ -290,84 +290,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Member Qualifications Section */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-white" />
-        
-        {/* Custom Zig-zag Divider Effect */}
-        <div className="absolute top-0 left-0 w-full h-12 bg-background z-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 95% 40%, 90% 100%, 85% 40%, 80% 100%, 75% 40%, 70% 100%, 65% 40%, 60% 100%, 55% 40%, 50% 100%, 45% 40%, 40% 100%, 35% 40%, 30% 100%, 25% 40%, 20% 100%, 15% 40%, 10% 100%, 5% 40%, 0 100%)" }} />
-        
+      {/* Member Requirements Section */}
+      <section className="py-32 relative overflow-hidden bg-background">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-4">
-              <h2 className="text-6xl md:text-7xl font-serif text-black leading-none mb-4">Member Qualifications</h2>
-              <p className="text-sm tracking-widest text-black/60 uppercase">(unless exclusively invited by our team)</p>
+              <h2 className="text-6xl md:text-7xl font-serif text-foreground leading-none mb-4 uppercase tracking-tighter">Member<br/>Requirements</h2>
+              <p className="text-xs tracking-[0.3em] text-primary uppercase font-bold">Exclusive Entry Protocol</p>
             </div>
             
             <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="space-y-6">
-                <h3 className="text-4xl font-serif italic text-black">1 Mio. Followers plus</h3>
-                <p className="text-black/70 leading-relaxed">Members need to have at least a combined following of more than a million across all social media platforms.</p>
+              <div className="p-8 border border-white/5 bg-white/5 backdrop-blur-sm hover:border-primary/50 transition-colors duration-500 rounded-2xl group">
+                <span className="text-primary text-[10px] tracking-[0.4em] uppercase font-bold block mb-6">Digital Reach</span>
+                <h3 className="text-3xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">1M+ Network</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">A verified combined following exceeding one million across primary social platforms is mandatory for consideration.</p>
               </div>
-              <div className="space-y-6">
-                <h3 className="text-4xl font-serif italic text-black">5 % E.R. plus</h3>
-                <p className="text-black/70 leading-relaxed">Members need to have an engagement rate of above 5% - 5 times above average.</p>
+              <div className="p-8 border border-white/5 bg-white/5 backdrop-blur-sm hover:border-primary/50 transition-colors duration-500 rounded-2xl group">
+                <span className="text-primary text-[10px] tracking-[0.4em] uppercase font-bold block mb-6">Impact Score</span>
+                <h3 className="text-3xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">5% Engagement</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">We prioritize active influence. An organic engagement rate of 5% or higher is required to ensure authentic brand resonance.</p>
               </div>
-              <div className="space-y-6">
-                <h3 className="text-4xl font-serif italic text-black">Application approved</h3>
-                <p className="text-black/70 leading-relaxed">Members need to be approved through our application process and Zoom interview call.</p>
+              <div className="p-8 border border-white/5 bg-white/5 backdrop-blur-sm hover:border-primary/50 transition-colors duration-500 rounded-2xl group">
+                <span className="text-primary text-[10px] tracking-[0.4em] uppercase font-bold block mb-6">Curation</span>
+                <h3 className="text-3xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">Direct Approval</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">Final selection is determined through a rigorous multi-stage review process, including a personal interview with our founding team.</p>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 w-full h-12 bg-background z-10" style={{ clipPath: "polygon(0 100%, 0 0, 5% 60%, 10% 0, 15% 60%, 20% 0, 25% 60%, 30% 0, 35% 60%, 40% 0, 45% 60%, 50% 0, 55% 60%, 60% 0, 65% 60%, 70% 0, 75% 60%, 80% 0, 85% 60%, 90% 0, 95% 60%, 100% 0, 100% 100%)" }} />
       </section>
 
-      {/* Trips/Grid Images Section */}
-      <section className="py-32 px-6">
+      {/* Global Expeditions Section */}
+      <section className="py-32 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24 max-w-2xl mx-auto">
-            <h2 className="text-6xl md:text-8xl font-serif text-foreground mb-6 leading-none tracking-tighter">Trips Around The World</h2>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed">
-              Join Members <span className="text-white font-bold italic">around the world</span> for experiences you never thought <span className="italic">existed.</span>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <h2 className="text-5xl md:text-7xl font-serif text-foreground leading-none tracking-tighter uppercase">Global Expeditions</h2>
+            <p className="text-sm md:text-base text-muted-foreground font-light tracking-widest uppercase max-w-md">
+              Curated experiences for the world's most influential creators.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[1200px] md:h-[900px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-[300px]">
             <motion.div 
               whileHover={{ scale: 0.98 }}
-              className="md:col-span-4 rounded-3xl overflow-hidden relative group"
+              className="col-span-2 row-span-2 rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src={gridImg1} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Trip 1" />
+              <img src="/src/assets/images/trip_1.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
             
-            <div className="md:col-span-4 grid grid-rows-3 gap-6">
-              <motion.div 
-                whileHover={{ scale: 0.98 }}
-                className="rounded-3xl overflow-hidden relative group"
-              >
-                <img src="https://images.unsplash.com/photo-1539109132382-381bb3f1cffb?q=80&w=800" className="w-full h-full object-cover" alt="Luxury Dinner" />
-              </motion.div>
-              <motion.div 
-                whileHover={{ scale: 0.98 }}
-                className="rounded-3xl overflow-hidden relative group"
-              >
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800" className="w-full h-full object-cover" alt="Dubai Luxury" />
-              </motion.div>
-              <motion.div 
-                whileHover={{ scale: 0.98 }}
-                className="rounded-3xl overflow-hidden relative group"
-              >
-                <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=800" className="w-full h-full object-cover" alt="Fashion Show" />
-              </motion.div>
-            </div>
+            <motion.div 
+              whileHover={{ scale: 0.98 }}
+              className="col-span-2 rounded-2xl overflow-hidden relative group border border-white/5"
+            >
+              <img src="/src/assets/images/trip_2.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
+            </motion.div>
 
             <motion.div 
               whileHover={{ scale: 0.98 }}
-              className="md:col-span-4 rounded-3xl overflow-hidden relative group"
+              className="rounded-2xl overflow-hidden relative group border border-white/5"
             >
-              <img src={gridImg2} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Trip 2" />
+              <img src="/src/assets/images/trip_3.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
+            </motion.div>
+
+            <motion.div 
+              whileHover={{ scale: 0.98 }}
+              className="rounded-2xl overflow-hidden relative group border border-white/5"
+            >
+              <img src="/src/assets/images/trip_4.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Global Expedition" />
             </motion.div>
           </div>
         </div>
@@ -394,11 +384,10 @@ export default function Home() {
       {/* Footer Strip */}
       <footer className="py-20 border-t border-white/5 bg-background">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-8xl md:text-[12rem] font-serif text-foreground/5 tracking-tighter leading-none mb-12 select-none">VOSS CASTING</h2>
+          <h2 className="text-8xl md:text-[12rem] font-serif text-foreground/5 tracking-tighter leading-none mb-12 select-none uppercase">VOSS CASTING</h2>
           <div className="flex justify-center gap-12 text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-bold">
-            <Link href="/models" className="hover:text-primary transition-colors">Talent</Link>
-            <Link href="/about" className="hover:text-primary transition-colors">About</Link>
-            <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
+            <Link href="/models" className="hover:text-primary transition-colors">Models</Link>
+            <Link href="/contact" className="hover:text-primary transition-colors">Join</Link>
           </div>
         </div>
       </footer>
