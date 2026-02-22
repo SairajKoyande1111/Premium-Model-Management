@@ -324,8 +324,8 @@ export default function Home() {
                 <span className="text-primary font-serif text-4xl block mb-8 opacity-40 group-hover:opacity-100 transition-opacity italic underline underline-offset-8 decoration-1">
                   {item.id}
                 </span>
-                <h3 className="text-2xl font-serif text-white mb-4 tracking-tight">{item.title}</h3>
-                <p className="text-white/70 text-sm leading-relaxed font-sans font-light">
+                <h3 className="text-2xl font-sans font-bold text-white mb-4 tracking-tight uppercase">{item.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed font-sans font-normal">
                   {item.desc}
                 </p>
               </motion.div>
